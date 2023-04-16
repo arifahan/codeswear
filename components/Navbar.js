@@ -43,6 +43,9 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           <Link href={"/stickers"}>
             <li>Stickers</li>
           </Link>
+          <Link href={"/blogs"}>
+            <li>Blogs</li>
+          </Link>
         </ul>
       </div>
       <div
