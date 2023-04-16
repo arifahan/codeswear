@@ -1,7 +1,8 @@
-import React from "react";
 
-const blog2 = () => {
+
+const Blog2 = () => {
   return <div>This Blog Page Tow</div>;
 };
 
-export default blog2;
+export default Blog2;
+

@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 
-const blogs = (props) => {
+const Blogs = (props) => {
   const { posts } = props;
   const [blog, setBlog] = useState(posts);
 
@@ -91,4 +92,4 @@ export async function getServerSideProps(context) {
     props: { posts },
   };
 }
-export default blogs;
+export default Blogs;
