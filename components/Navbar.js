@@ -54,7 +54,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       >
         <AiOutlineShoppingCart className="text-2xl md:text-3xl" />
         <span className="border-2 rounded-full border-indigo-600 text-xs leading-3 h-5 p-px">
-          10
+          09
         </span>
       </div>
       <div
