@@ -7,7 +7,9 @@ export default function App({ Component, pageProps }) {
   const [cart, setCart] = useState({});
 
   const [subTotal, setSubTotal] = useState(0);
+
   useEffect(() => {
+
     try {
       if (localStorage.getItem("cart")) {
         setCart(JSON.parse(localStorage.getItem("cart")));
@@ -19,21 +21,23 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   const saveCart = (myCart) => {
-    localStorage.setItem("cart", myCart);
+    
+    localStorage.setItem("cart", JSON.stringify(myCart));
     let subt = 0;
     let keys = Object.keys(myCart);
     for (let i = 0; i < keys.length; i++) {
-      subt += cart[keys[i]].price * cart[keys[i]].qty;
+      subt += myCart[keys[i]].price * myCart[keys[i]].qty;
     }
     setSubTotal(subt);
+
   };
 
   const addToCart = (itemCode, qty, price, name, size, variant) => {
     let newCart = cart;
     if (itemCode in cart) {
-      newCart[itemCode].qty = cart[itemCode].qty + qty;
+      newCart[itemCode].qty = cart[itemCode].qty + 1;
     } else {
-      newCart[itemCode] = { qty, price, name, size, variant };
+      newCart[itemCode] = { itemCode, qty, price, name, size, variant };
     }
     setCart(newCart);
     saveCart(newCart);

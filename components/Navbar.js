@@ -10,7 +10,6 @@ import {
 import { BsFillBagCheckFill } from "react-icons/bs";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  const check = Object.keys(cart);
   const ref = useRef();
   const toggleCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
@@ -25,7 +24,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   const [isSigndIn, setisSigndIn] = useState(false);
 
   return (
-    <div className="shadow-xl">
+    <div className="shadow-xl sticky top-0 bg-white">
       <div className="container mx-auto py-3 flex flex-col md:flex-row md:justify-between justify-center items-center my-2 ">
         <Link href={"/"} className="logo mx-5">
           <Image src="/logo-1.png" alt="band img" width={100} height={40} />
@@ -57,17 +56,13 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           className="mr-20 cursor-pointer w-28 justify-items-center"
         >
           {isSigndIn ? (
-            <button
-              onClick={clearCart}
-              className="text-white bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 hover:duration-700 rounded-full text-ms mr-2"
-            >
-              Login
-            </button>
+            <Link href={"/login"}>
+              <button className="text-white bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 hover:duration-700 rounded-full text-ms mr-2">
+                Login
+              </button>
+            </Link>
           ) : (
-            <button
-              onClick={clearCart}
-              className="text-white bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 hover:duration-700 rounded-full text-ms mr-2"
-            >
+            <button className="text-white bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 hover:duration-700 rounded-full text-ms mr-2">
               Logout
             </button>
           )}
@@ -85,7 +80,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
         <div
           ref={ref}
-          className="w-72 h-full sideCart py-5 px-8 absolute top-0 right-0 bg-pink-100 transform transition-transform translate-x-full z-40"
+          className="w-72 h-[100vh] sideCart py-5 px-8 absolute top-0 right-0 bg-pink-100 transform transition-transform translate-x-full z-40"
         >
           <h2 className="font-bold text-xl text-center pb-2">Shopping Cart</h2>
           <span
@@ -104,9 +99,19 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                   <div className="item flex">
                     <div className="w-2/3 text-semibold">{cart[k].name}</div>
                     <div className="w-1/3 text-semibold flex items-center justify-center">
-                      <AiOutlinePlus className="mr-2 cursor-pointer text-xm border-2 border-pink-400 rounded-full " />
+                      <AiOutlineMinus
+                        onClick={() => {
+                          removeFromCart(cart[k].itemCode, cart[k].qty);
+                        }}
+                        className="mr-2 cursor-pointer text-xm border-2 border-pink-400 rounded-full "
+                      />
                       {cart[k].qty}
-                      <AiOutlineMinus className="ms-2 text-xm border-2 border-pink-400 rounded-full cursor-pointer" />
+                      <AiOutlinePlus
+                        onClick={() => {
+                          addToCart(cart[k].itemCode, cart[k].qty);
+                        }}
+                        className="ms-2 text-xm border-2 border-pink-400 rounded-full cursor-pointer"
+                      />
                     </div>
                   </div>
                 </li>
@@ -114,9 +119,12 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             })}
           </ol>
           <div className="flex justify-center pt-4">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded text-ms mr-2">
-              <BsFillBagCheckFill className="mr-2 mt-1" /> Checkout
-            </button>
+            <Link href={"/checkout"}>
+              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded text-ms mr-2">
+                <BsFillBagCheckFill className="mr-2 mt-1" /> Checkout
+              </button>
+            </Link>
+
             <button
               onClick={clearCart}
               className="inline-flex text-white bg-indigo-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600  rounded text-ms mr-2"
