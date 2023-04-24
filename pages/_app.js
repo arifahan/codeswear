@@ -9,19 +9,19 @@ export default function App({ Component, pageProps }) {
   const [subTotal, setSubTotal] = useState(0);
 
   useEffect(() => {
-
     try {
       if (localStorage.getItem("cart")) {
         setCart(JSON.parse(localStorage.getItem("cart")));
+        saveCart(JSON.parse(localStorage.getItem("cart")));
+
       }
     } catch (error) {
       console.error(error);
       localStorage.clear();
     }
-  }, []);
+  }, [setSubTotal]);
 
   const saveCart = (myCart) => {
-    
     localStorage.setItem("cart", JSON.stringify(myCart));
     let subt = 0;
     let keys = Object.keys(myCart);
@@ -29,7 +29,6 @@ export default function App({ Component, pageProps }) {
       subt += myCart[keys[i]].price * myCart[keys[i]].qty;
     }
     setSubTotal(subt);
-
   };
 
   const addToCart = (itemCode, qty, price, name, size, variant) => {
@@ -63,6 +62,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar
+        key={subTotal}
         cart={cart}
         addToCart={addToCart}
         removeFromCart={removeFromCart}

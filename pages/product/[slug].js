@@ -155,7 +155,7 @@ const Slug = ({ addToCart }) => {
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
-                  <div className="relative">
+                  <div className="">
                     <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                       <option>SM</option>
                       <option>M</option>

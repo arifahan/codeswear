@@ -8,6 +8,7 @@ import {
   AiOutlineMinus,
 } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   const ref = useRef();
@@ -20,8 +21,6 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       ref.current.classList.add("translate-x-full");
     }
   };
-
-  const [isSigndIn, setisSigndIn] = useState(false);
 
   return (
     <div className="shadow-xl sticky top-0 bg-white">
@@ -51,36 +50,26 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             </Link>
           </ul>
         </div>
-        <div
-          onClick={() => setisSigndIn(true)}
-          className="mr-20 cursor-pointer w-28 justify-items-center"
-        >
-          {isSigndIn ? (
+        <div className="mr-20 cursor-pointer w-28 justify-items-center">
+          <div className="cart absolute right-0 top-4 mx-5 flex cursor-pointer">
             <Link href={"/login"}>
-              <button className="text-white bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 hover:duration-700 rounded-full text-ms mr-2">
-                Login
-              </button>
+              <FaUserCircle className="text-2xl mr-2 md:text-3xl" />
             </Link>
-          ) : (
-            <button className="text-white bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 hover:duration-700 rounded-full text-ms mr-2">
-              Logout
-            </button>
-          )}
 
-          <div
-            onClick={toggleCart}
-            className="cart absolute right-0 top-4 mx-5 flex cursor-pointer"
-          >
-            <AiOutlineShoppingCart className="text-2xl md:text-3xl" />
-            <span className="border-2 rounded-full border-indigo-600 text-xs leading-3 h-5 p-px">
-              09
-            </span>
+            <AiOutlineShoppingCart
+              onClick={toggleCart}
+              className="text-2xl md:text-3xl"
+            />
           </div>
         </div>
 
         <div
           ref={ref}
-          className="w-72 h-[100vh] sideCart py-5 px-8 absolute top-0 right-0 bg-pink-100 transform transition-transform translate-x-full z-40"
+          className={`w-70 h-[100vh] sideCart py-5 px-8 absolute top-0 right-0 bg-pink-100 transform transition-transform ${
+            Object.keys(cart).length === 0
+              ? "translate-x-full"
+              : "translate-x-0"
+          } z-50`}
         >
           <h2 className="font-bold text-xl text-center pb-2">Shopping Cart</h2>
           <span
@@ -95,26 +84,32 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             )}
             {Object.keys(cart).map((k) => {
               return (
-                <li key={k}>
-                  <div className="item flex">
-                    <div className="w-2/3 text-semibold">{cart[k].name}</div>
-                    <div className="w-1/3 text-semibold flex items-center justify-center">
-                      <AiOutlineMinus
-                        onClick={() => {
-                          removeFromCart(cart[k].itemCode, cart[k].qty);
-                        }}
-                        className="mr-2 cursor-pointer text-xm border-2 border-pink-400 rounded-full "
-                      />
-                      {cart[k].qty}
-                      <AiOutlinePlus
-                        onClick={() => {
-                          addToCart(cart[k].itemCode, cart[k].qty);
-                        }}
-                        className="ms-2 text-xm border-2 border-pink-400 rounded-full cursor-pointer"
-                      />
+                <>
+                  <li key={k}>
+                    <div className="item flex">
+                      <div className="w-2/3 text-semibold">{cart[k].name}</div>
+                      <div className="w-1/3 text-semibold flex items-center justify-center">
+                        <AiOutlineMinus
+                          onClick={() => {
+                            removeFromCart(cart[k].itemCode, cart[k].qty);
+                          }}
+                          className="mr-2 cursor-pointer text-xm border-2 border-pink-400 rounded-full "
+                        />
+                        {cart[k].qty}
+                        <AiOutlinePlus
+                          onClick={() => {
+                            addToCart(cart[k].itemCode, cart[k].qty);
+                          }}
+                          className="ms-2 text-xm border-2 border-pink-400 rounded-full cursor-pointer"
+                        />
+                      </div>
                     </div>
+                  </li>
+                  <div>
+                    <span>$</span>
+                    {subTotal}
                   </div>
-                </li>
+                </>
               );
             })}
           </ol>

@@ -11,7 +11,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -35,7 +35,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -59,7 +59,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -83,7 +83,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -107,7 +107,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -131,7 +131,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -155,7 +155,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -179,7 +179,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -203,7 +203,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -227,7 +227,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -251,7 +251,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -275,7 +275,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -299,7 +299,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -323,7 +323,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -347,7 +347,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -371,7 +371,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -395,7 +395,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
@@ -419,7 +419,7 @@ const Hoodies = () => {
               href={"/product/were-the-code"}
             >
               <div>
-                <div className="block relative rounded overflow-hidden transition-transform hover:scale-110">
+                <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
                     className="m-auto my-0  block py-10"
