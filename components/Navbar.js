@@ -65,7 +65,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
         <div
           ref={ref}
-          className={`w-70 h-[100vh] sideCart py-5 px-8 absolute top-0 right-0 bg-pink-100 transform transition-transform ${
+          className={`w-70 h-[100vh] sideCart  py-5 px-8 absolute top-0 right-0 bg-pink-100 overflow-hidden transform transition-transform ${
             Object.keys(cart).length === 0
               ? "translate-x-full"
               : "translate-x-0"
