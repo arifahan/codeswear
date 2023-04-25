@@ -6,14 +6,14 @@ const Mugs = () => {
         <div className="container px-5 py-24 mx-auto text-center">
           <div className="flex flex-wrap -m-4">
             <Link
-              className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer md:shadow-md m-4 hover:shadow-2xl hover:duration-700 hover:"
+              className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer md:shadow-md m-4 hover:shadow-2xl hover:duration-700"
               href={"/product/were-the-code"}
             >
               <div>
                 <div className="block rounded overflow-hidden transition-transform hover:scale-110">
                   <img
                     alt="ecommerce"
-                    className="m-auto my-0 block py-10"
+                    className="m-auto my-0 block overflow-hidden py-10"
                     src="https://m.media-amazon.com/images/I/712Mcy+8ojL._AC_SL1500_.jpg"
                   />
                 </div>
