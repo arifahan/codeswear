@@ -6,7 +6,7 @@ const Mugs = () => {
         <div className="container px-5 py-24 mx-auto text-center">
           <div className="flex flex-wrap -m-4">
             <Link
-              className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer md:shadow-md m-4 hover:shadow-2xl hover:duration-700"
+              className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer md:shadow-md m-4 hover:shadow-2xl hover:duration-700 hover:"
               href={"/product/were-the-code"}
             >
               <div>

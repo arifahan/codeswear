@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="">
-        <img className="home_img" src="/home.jpg" alt="Home Image" />
+        <img className="home_img" src="/home.png" alt="Home Image" />
       </div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto text-center">

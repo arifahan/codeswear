@@ -25,7 +25,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   return (
     <div className="shadow-xl sticky top-0 bg-white">
       <div className="container mx-auto py-3 flex flex-col md:flex-row md:justify-between justify-center items-center my-2 ">
-        <Link href={"/"} className="logo mx-5">
+        <Link href={"/"}  className="logo mx-5">
           <Image src="/logo-1.png" alt="band img" width={100} height={40} />
         </Link>
         <div className="nav ">
