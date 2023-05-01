@@ -66,18 +66,18 @@ const Login = () => {
                 <input type="checkbox" />
                 <label
                   htmlFor="password"
-                  class="block text-sm font-medium leading-6 text-gray-900"
+                  class="block text-sm font-medium leading-6 text-gray-900 mx-2"
                 >
-                  Password
+                  Remember Me
                 </label>
               </div>
               <div class="text-sm">
-                <a
-                  href="#"
+                <Link
+                  href="/forgot"
                   class="font-semibold text-pink-600 hover:text-pink-500"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
             </div>
             <div>
@@ -89,16 +89,6 @@ const Login = () => {
               </button>
             </div>
           </form>
-
-          <p class="mt-10 text-center text-sm text-gray-500">
-            Not a member?
-            <a
-              href="#"
-              class="font-semibold leading-6 text-pink-600 hover:text-pink-500"
-            >
-              Start a 14 day free trial
-            </a>
-          </p>
         </div>
       </div>
     </div>

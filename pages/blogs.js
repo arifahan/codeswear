@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const Blogs = (props) => {
   const { posts } = props;
+
   const [blog, setBlog] = useState(posts);
 
   return (
